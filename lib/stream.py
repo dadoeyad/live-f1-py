@@ -27,10 +27,10 @@ class OpenStream:
 		while True:
 			try:
 				byte = s.recv(1)
-				print byte
+				print (byte)
 			except socket.timeout:
 				s.send("\n")
 
 stream = OpenStream("asd@asd.com", "password")
 stream.auth()
-print stream.stream()
+print (stream.stream())
